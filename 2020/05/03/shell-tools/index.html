@@ -20,19 +20,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":7,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="a little... a little...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="忽然发现对平时linux环境下处理各种问题、故障排查等用的shell命令从来没有系统的整理一下，有些命令用的时候还要man以下，所以打算把平时常用的命令(大部分应该是文本处理相关的命令)写下来加深下理解，本文知识一个大纲，大概列举下要写下来的命令，同时作简单的介绍，后面希望自己能坚持下去把每个命令单独展开写篇文章。  findfind命令主要用来搜索某个目录下的文件，这里以GUN版本为标准进行讲">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux shell常应命令教程集">
+<meta property="og:url" content="http://yoursite.com/2020/05/03/shell-tools/index.html">
 <meta property="og:site_name" content="LKUA">
-<meta property="og:description" content="a little... a little...">
+<meta property="og:description" content="忽然发现对平时linux环境下处理各种问题、故障排查等用的shell命令从来没有系统的整理一下，有些命令用的时候还要man以下，所以打算把平时常用的命令(大部分应该是文本处理相关的命令)写下来加深下理解，本文知识一个大纲，大概列举下要写下来的命令，同时作简单的介绍，后面希望自己能坚持下去把每个命令单独展开写篇文章。  findfind命令主要用来搜索某个目录下的文件，这里以GUN版本为标准进行讲">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-27T15:24:53.000Z">
-<meta property="article:modified_time" content="2020-04-27T15:25:09.818Z">
+<meta property="article:published_time" content="2020-05-03T15:35:46.000Z">
+<meta property="article:modified_time" content="2020-05-03T17:37:37.708Z">
 <meta property="article:author" content="lkua">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="shell">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/categories/">
+<link rel="canonical" href="http://yoursite.com/2020/05/03/shell-tools/">
 
 
 <script id="page-configurations">
@@ -40,13 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>categories | LKUA
-</title>
+  <title>linux shell常应命令教程集 | LKUA</title>
   
 
 
@@ -184,51 +185,147 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/03/shell-tools/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="lkua">
+      <meta itemprop="description" content="a little... a little...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LKUA">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          linux shell常应命令教程集
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">categories
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta">
+              <time title="创建时间：2020-05-03 23:35:46" itemprop="dateCreated datePublished" datetime="2020-05-03T23:35:46+08:00">2020-05-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-04 01:37:37" itemprop="dateModified" datetime="2020-05-04T01:37:37+08:00">2020-05-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <ul>
+<li><p>忽然发现对平时linux环境下处理各种问题、故障排查等用的shell命令从来没有系统的整理一下，有些命令用的时候还要man以下，所以打算把平时常用的命令(大部分应该是文本处理相关的命令)写下来加深下理解，本文知识一个大纲，大概列举下要写下来的命令，同时作简单的介绍，后面希望自己能坚持下去把每个命令单独展开写篇文章。</p>
+</li>
+<li><p>find<br>find命令主要用来搜索某个目录下的文件，这里以GUN版本为标准进行讲解,首先是命令基本格式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find path [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [expression]</span><br></pre></td></tr></table></figure>
+<p>-H,-L,-P选项主要用来控制对符号连接的处理方式,默认为-P，即不跟踪符号连接，也就是说处理到符号连接时将其作为普通文件处理<br>文件筛选的常用参数如下：<br>-mount,-xdev: 之检查和制定目录在统一个文件系统下的文件<br>-amin n:在过去n分钟内被读取过的文件<br>-anerwer file:比file更晚读取国的文件<br>-atime n:在过去n天内被读取国的文件<br>-cmin n:作过去n分钟内被修改过的文件<br>-cnewer file:比文件file更新的文件<br>-ctime n:在过去n天内被修改国的文件<br>-empty:空文件<br>-gid n or -group name:gid是n或group名为name的文件<br>-ipath p,-path p:路径名称符合p的文件，ipath忽略大小写<br>-name name,-iname name:文件名符合name的文件,iname会忽略大小写<br>-size n:文件大小是n的单位，b代表512位元组的区块，c代表字数，k代表kb,w是各个位元组<br>-type c:文件类型是c的文件(c的取值：d:目录 c:字符设备 b:块设备 p:？？ f:一般文件 l:符号连接 s:socket)<br>-pid n: process id是n的文件<br>相关实例如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ find . -name <span class="string">"\*.c"</span> <span class="comment"># 查找当前目录下以".c"为后缀的文件</span></span><br><span class="line">$ find . -<span class="built_in">type</span> f <span class="comment"># 查找当前目录及其子目录下的一般文件</span></span><br><span class="line">$ find . -ctime -20 查找当前目录及其子目录下最经20天内更新过的文件</span><br><span class="line">$ find /var/<span class="built_in">log</span> -<span class="built_in">type</span> f -mtime +7 -ok rm &#123;&#125; \; <span class="comment"># 查找/var/log目录中更改时间在7日以前的普通文件，并在删除前作询问</span></span><br><span class="line">$ find . -<span class="built_in">type</span> f -perm 644 -<span class="built_in">exec</span> ls -l &#123;&#125; \; 查找当前目录中权限为644的文件，并列出详情</span><br><span class="line">$ find / -<span class="built_in">type</span> f -size 0 -<span class="built_in">exec</span> ls &#123;&#125; \; 查找系统中长度为0的普通文件并列出其路径</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>grep<br>grep/egrep/fgrep/rgrep 从指定文件逐行读取内容并输出符合指定表达式的行(后面几个为其变体，相当于制定grep -E,grep -F,grep -r),基本格式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ grep [OPTION...] PATTERNS [FILE...]</span><br><span class="line">$ grep [OPTION...] -e PATTERNS [FILE...]</span><br><span class="line">$ grep [OPTION...] -f PATTERN_FILE [FILE...]</span><br></pre></td></tr></table></figure>
+<p>以下几个flag控制PATTERNS的处理方式(即其语法)<br>-E 以扩展的正则表达式翻译PATTERNS<br>-F 以-固定字符串(fixed strings)-而不是正则表达式翻译PATTERNS<br>-G 默认的 BREs<br>-P 使用PCREs</p>
+<p>-e PATTERNS: 使用PATTERNS<br>-f FILE: 从文件中读取表达式，每一行为一个表达式<br>-i: 不区分大小写<br>-v: 选取不符合表达式的行<br>-x: 要求整行匹配<br>-w: ??<br>以下参数控制输出内容<br>-c: 每个输入文件中只打印最多制定行数的内容(可以与-v配合使用)<br>–color: 以指定的颜色(由GREP_COLORS配置)输出匹配的字符串<br>-L： 修改输出行为,打印没有匹配内容的文件名而不是匹配的内容<br>-l:  修改输出行为,打印有匹配内容的文件名而不是匹配的内容<br>以下参数控制输出前缀<br>-b: 添加打印匹配哪个文件的哪个位置<br>-H: 打印文件名，该参数默认指定<br>-h: 不打印文件名<br>–label=LABEL: 将标准输出重命名为LABEL<br>-n:打印匹配的行数(从1开始计算)<br>-z,–null:</p>
+</li>
+</ul>
+<ul>
+<li><p>sed<br>sed，一个过滤、转换文本内容的流式编辑器，一般格式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sed [OPTION]... &#123;script-only-if-no-other-script&#125; [input-file]...</span><br></pre></td></tr></table></figure>
+<p>参数说明如下：<br>-e script: 指定要运行的脚本<br>-f script-file:指定要运行的脚本文件</p>
+</li>
+<li><p>awk<br>awk</p>
+</li>
+<li><p>xargs</p>
+</li>
+<li><p>sort</p>
+</li>
+<li><p>uniq</p>
+</li>
+<li><p>seq</p>
+</li>
+<li><p>tr</p>
+</li>
+<li><p>cut</p>
+</li>
+<li><p>paste</p>
+</li>
+<li><p>wc</p>
+</li>
+<li><p>top</p>
+</li>
+<li><p>ps</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/shell/" rel="tag"># shell</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/03/shell-ps/" rel="prev" title="shell-ps">
+      <i class="fa fa-chevron-left"></i> shell-ps
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/12/dfs-bfs/" rel="next" title="dfs&bfs">
+      dfs&bfs <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="category-all-page">
-            <div class="category-all-title">
-              目前共计 2 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/shell/">shell</a><span class="category-list-count">3</span></li></ul></li></ul>
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -474,7 +571,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'ds-lkua.github.io',
       owner       : 'ds-lkua',
       admin       : [''],
-      id          : 'a676607444a8bc8b150c9a3aff884e61',
+      id          : 'a36b3ee468b19cdc1c9c14a3c6661034',
         language: 'en | zh-CN',
       distractionFreeMode: true
     });

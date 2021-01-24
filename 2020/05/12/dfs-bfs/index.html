@@ -21,18 +21,18 @@
   </script>
 
   <meta name="description" content="a little... a little...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dfs&amp;bfs">
+<meta property="og:url" content="http://yoursite.com/2020/05/12/dfs-bfs/index.html">
 <meta property="og:site_name" content="LKUA">
 <meta property="og:description" content="a little... a little...">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-27T15:17:36.000Z">
-<meta property="article:modified_time" content="2020-04-27T15:23:44.673Z">
+<meta property="article:published_time" content="2020-05-12T14:54:28.000Z">
+<meta property="article:modified_time" content="2020-05-12T14:54:28.000Z">
 <meta property="article:author" content="lkua">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/tags/">
+<link rel="canonical" href="http://yoursite.com/2020/05/12/dfs-bfs/">
 
 
 <script id="page-configurations">
@@ -40,13 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>tags | LKUA
-</title>
+  <title>dfs&bfs | LKUA</title>
   
 
 
@@ -184,55 +183,83 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/12/dfs-bfs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="lkua">
+      <meta itemprop="description" content="a little... a little...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LKUA">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          dfs&bfs
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">tags
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta">
+              <time title="创建时间：2020-05-12 22:54:28" itemprop="dateCreated datePublished" datetime="2020-05-12T22:54:28+08:00">2020-05-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/03/shell-tools/" rel="prev" title="linux shell常应命令教程集">
+      <i class="fa fa-chevron-left"></i> linux shell常应命令教程集
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              目前共计 4 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/cut/" style="font-size: 12px; color: #ccc">cut</a> <a href="/tags/linux/" style="font-size: 30px; color: #111">linux</a> <a href="/tags/ps/" style="font-size: 12px; color: #ccc">ps</a> <a href="/tags/shell/" style="font-size: 30px; color: #111">shell</a>
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -462,6 +489,25 @@ window.addEventListener('pjax:success', () => {
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'd3b817b1aaada2780a39',
+      clientSecret: 'a1492e93de7ae50a0c07a6ce13eb91338ec9d06e',
+      repo        : 'ds-lkua.github.io',
+      owner       : 'ds-lkua',
+      admin       : [''],
+      id          : '3aafc372703b2380b763db4474968a73',
+        language: 'en | zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
     </div>
 </body>
